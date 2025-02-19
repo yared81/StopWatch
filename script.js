@@ -1,4 +1,4 @@
-// Stopwatch Logic
+// Stopwatch
 let stopwatch = {
     startTime: 0,
     elapsedTime: 0,
@@ -17,7 +17,8 @@ let stopwatch = {
     let hours = Math.floor(milliseconds / 3600000);
     let minutes = Math.floor((milliseconds % 3600000) / 60000);
     let seconds = Math.floor((milliseconds % 60000) / 1000);
-    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    let millis = Math.floor((milliseconds % 1000));
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(millis).padStart(3, '0')}`;
   }
   
   function updateStopwatchDisplay() {
@@ -63,7 +64,7 @@ let stopwatch = {
   lapButton.addEventListener('click', lap);
   resetButton.addEventListener('click', resetStopwatch);
   
-  // Timer Logic
+  // Timer 
   let timer = {
     timeLeft: 0,
     timerInterval: null,
@@ -71,6 +72,7 @@ let stopwatch = {
   };
   
   const timerDisplay = document.querySelector('#timer .display');
+  const hoursInput = document.getElementById('hours');
   const minutesInput = document.getElementById('minutes');
   const secondsInput = document.getElementById('seconds');
   const startTimerButton = document.getElementById('startTimer');
@@ -83,9 +85,10 @@ let stopwatch = {
   
   function startTimer() {
     if (!timer.isRunning) {
+      const hours = parseInt(hoursInput.value) || 0;
       const minutes = parseInt(minutesInput.value) || 0;
       const seconds = parseInt(secondsInput.value) || 0;
-      timer.timeLeft = (minutes * 60000) + (seconds * 1000);
+      timer.timeLeft = (hours * 3600000) + (minutes * 60000) + (seconds * 1000);
   
       if (timer.timeLeft > 0) {
         timer.timerInterval = setInterval(() => {
@@ -113,6 +116,7 @@ let stopwatch = {
     timer.timeLeft = 0;
     timer.isRunning = false;
     updateTimerDisplay();
+    hoursInput.value = '';
     minutesInput.value = '';
     secondsInput.value = '';
   }
@@ -121,7 +125,7 @@ let stopwatch = {
   stopTimerButton.addEventListener('click', stopTimer);
   resetTimerButton.addEventListener('click', resetTimer);
   
-  // Tab Logic
+  // Tab 
   const tabButtons = document.querySelectorAll('.tab-button');
   const tabContents = document.querySelectorAll('.tab-content');
   
