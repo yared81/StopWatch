@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 550px;
+    height: 450px;
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .tab-button.active {
+    border-bottom: 2px solid #fff;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+
+  .display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    letter-spacing: 2px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+  
+  .controls button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #2575fc;
+    cursor: pointer;
+    
+  }
+  
+  .controls button:hover {
+    background: #2575fc;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .controls button:active {
+    transform: scale(0.95);
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  
+  .laps {
+    margin-top: 1rem;
+  }
+  
+  .laps ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .laps li {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
