@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stopwatch & Timer</title>
-  <link rel="icon" type="image/x-icon" href="images/clock.ico">
-
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/clock.ico">
 </head>
 <body>
   <div class="container">
@@ -17,7 +16,7 @@
 
     
     <div id="stopwatch" class="tab-content active">
-      <div class="display">00:00:00.000</div>
+      <div class="display">00:00:00.00</div>
       <div class="controls">
         <button id="startStop">Start</button>
         <button id="lap">Lap</button>
@@ -28,17 +27,18 @@
         <ul id="lapList"></ul>
       </div>
     </div>
-
     
     <div id="timer" class="tab-content">
-      <div class="display">00:00:00.000</div>
+      <div class="display">00:00:00.00</div>
       <div class="controls">
         <input type="number" id="hours" placeholder="Hours" min="0">
         <input type="number" id="minutes" placeholder="Minutes" min="0">
         <input type="number" id="seconds" placeholder="Seconds" min="0">
-        <button id="startTimer">Start</button>
-        <button id="stopTimer">Stop</button>
-        <button id="resetTimer">Reset</button>
+        <div class="timer-buttons">
+          <button id="startTimer">Start</button>
+          <button id="stopTimer">Stop</button>
+          <button id="resetTimer">Reset</button>
+        </div>
       </div>
     </div>
   </div>
