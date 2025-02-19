@@ -13,8 +13,9 @@
       <button class="tab-button" data-tab="timer">Timer</button>
     </div>
 
+    
     <div id="stopwatch" class="tab-content active">
-      <div class="display">00:00:00</div>
+      <div class="display">00:00:00.000</div>
       <div class="controls">
         <button id="startStop">Start</button>
         <button id="lap">Lap</button>
@@ -28,8 +29,9 @@
 
     
     <div id="timer" class="tab-content">
-      <div class="display">00:00:00</div>
+      <div class="display">00:00:00.000</div>
       <div class="controls">
+        <input type="number" id="hours" placeholder="Hours" min="0">
         <input type="number" id="minutes" placeholder="Minutes" min="0">
         <input type="number" id="seconds" placeholder="Seconds" min="0">
         <button id="startTimer">Start</button>
