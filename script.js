@@ -1,4 +1,4 @@
-// Stopwatch
+// Stopwatch Logic
 let stopwatch = {
     startTime: 0,
     elapsedTime: 0,
@@ -17,8 +17,8 @@ let stopwatch = {
     let hours = Math.floor(milliseconds / 3600000);
     let minutes = Math.floor((milliseconds % 3600000) / 60000);
     let seconds = Math.floor((milliseconds % 60000) / 1000);
-    let millis = Math.floor((milliseconds % 1000));
-    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(millis).padStart(3, '0')}`;
+    let millis = Math.floor((milliseconds % 1000) / 10); // 2 digits for milliseconds
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(millis).padStart(2, '0')}`;
   }
   
   function updateStopwatchDisplay() {
@@ -64,7 +64,7 @@ let stopwatch = {
   lapButton.addEventListener('click', lap);
   resetButton.addEventListener('click', resetStopwatch);
   
-  // Timer 
+  // Timer Logic
   let timer = {
     timeLeft: 0,
     timerInterval: null,
@@ -125,7 +125,7 @@ let stopwatch = {
   stopTimerButton.addEventListener('click', stopTimer);
   resetTimerButton.addEventListener('click', resetTimer);
   
-  // Tab 
+  // Tab Logic
   const tabButtons = document.querySelectorAll('.tab-button');
   const tabContents = document.querySelectorAll('.tab-content');
   
