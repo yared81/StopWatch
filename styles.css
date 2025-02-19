@@ -1,24 +1,25 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: #fff; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #fff;
+    color: #333;
   }
   
   .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);  
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    width: 550px;
-    height: 450px;
+    width: 700px; 
+    height: 550px; 
     text-align: center;
+    color: #fff;
   }
+  
   
   .tabs {
     display: flex;
@@ -56,6 +57,7 @@ body {
     letter-spacing: 2px;
   }
   
+  
   .controls {
     display: flex;
     justify-content: space-around;
@@ -70,7 +72,7 @@ body {
     background: #fff;
     color: #2575fc;
     cursor: pointer;
-    
+    transition: background 0.3s ease, transform 0.2s ease;
   }
   
   .controls button:hover {
@@ -83,6 +85,7 @@ body {
     transform: scale(0.95);
   }
   
+  
   input[type="number"] {
     width: 60px;
     padding: 0.5rem;
@@ -92,6 +95,37 @@ body {
     text-align: center;
   }
   
+  
+  .timer-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;  
+    margin-top: 1rem;
+  }
+  
+  .timer-buttons button {
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #2575fc;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .timer-buttons button:hover {
+    background: #2575fc;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .timer-buttons button:active {
+    transform: scale(0.95);
+  }
+  
+
   .laps {
     margin-top: 1rem;
   }
