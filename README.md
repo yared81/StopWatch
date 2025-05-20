@@ -1,2 +1,2 @@
-# StopWatch
-Includes functions of Stopwatch and Timer
+# Clock
+Includes functions of a world clock with cities, Stopwatch and Timer.
