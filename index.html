@@ -8,19 +8,19 @@
   <link rel="icon" type="image/x-icon" href="images/clock.ico">
 </head>
 <body>
-  <div class="container">
-    <div class="tabs">
-      <button class="tab-button active" data-tab="stopwatch">Stopwatch</button>
-      <button class="tab-button" data-tab="timer">Timer</button>
+  <div class="main">
+    <div class="nav">
+      <button class="nav-btn active" data-tab="stopwatch">Stopwatch</button>
+      <button class="nav-btn" data-tab="timer">Timer</button>
+      <button class="nav-btn" data-tab="worldclock">World Clock</button>
     </div>
 
-    
-    <div id="stopwatch" class="tab-content active">
-      <div class="display">00:00:00.00</div>
-      <div class="controls">
-        <button id="startStop">Start</button>
-        <button id="lap">Lap</button>
-        <button id="reset">Reset</button>
+    <div id="stopwatch" class="content active">
+      <div class="time">00:00:00.00</div>
+      <div class="buttons">
+        <button id="startStop" class="btn">Start</button>
+        <button id="lap" class="btn">Lap</button>
+        <button id="reset" class="btn">Reset</button>
       </div>
       <div class="laps">
         <h3>Laps</h3>
@@ -28,16 +28,63 @@
       </div>
     </div>
     
-    <div id="timer" class="tab-content">
-      <div class="display">00:00:00.00</div>
-      <div class="controls">
-        <input type="number" id="hours" placeholder="Hours" min="0">
-        <input type="number" id="minutes" placeholder="Minutes" min="0">
-        <input type="number" id="seconds" placeholder="Seconds" min="0">
-        <div class="timer-buttons">
-          <button id="startTimer">Start</button>
-          <button id="stopTimer">Stop</button>
-          <button id="resetTimer">Reset</button>
+    <div id="timer" class="content">
+      <div class="time">00:00:00.00</div>
+      <div class="buttons">
+        <div class="inputs">
+          <input type="number" id="hours" placeholder="Hours" min="0">
+          <input type="number" id="minutes" placeholder="Minutes" min="0">
+          <input type="number" id="seconds" placeholder="Seconds" min="0">
+        </div>
+        <div class="timer-btns">
+          <button id="startTimer" class="btn">Start</button>
+          <button id="stopTimer" class="btn">Stop</button>
+          <button id="resetTimer" class="btn">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="worldclock" class="content">
+      <div class="clocks">
+        <div class="clock">
+          <h3>Addis Ababa</h3>
+          <div class="time" id="addis-time">00:00:00</div>
+          <div class="date" id="addis-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>New York</h3>
+          <div class="time" id="newyork-time">00:00:00</div>
+          <div class="date" id="newyork-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>London</h3>
+          <div class="time" id="london-time">00:00:00</div>
+          <div class="date" id="london-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>Tokyo</h3>
+          <div class="time" id="tokyo-time">00:00:00</div>
+          <div class="date" id="tokyo-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>Dubai</h3>
+          <div class="time" id="dubai-time">00:00:00</div>
+          <div class="date" id="dubai-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>Paris</h3>
+          <div class="time" id="paris-time">00:00:00</div>
+          <div class="date" id="paris-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>Sydney</h3>
+          <div class="time" id="sydney-time">00:00:00</div>
+          <div class="date" id="sydney-date">Loading...</div>
+        </div>
+        <div class="clock">
+          <h3>Moscow</h3>
+          <div class="time" id="moscow-time">00:00:00</div>
+          <div class="date" id="moscow-date">Loading...</div>
         </div>
       </div>
     </div>
